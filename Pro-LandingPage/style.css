@@ -118,7 +118,7 @@ p {
 
 #main-footer {
     padding: 2em;
-    background: #0000;
+    background: #000;
     color: #fff;
     text-align: center;
 }
@@ -126,12 +126,14 @@ p {
 #main-footer a {
     color: #2690d4;
     text-decoration: none;
+    
 }
 
 @media (min-width: 700px) {
     .grid {
         display: grid;
         grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+        
     }
 
 #section-a .content-text{
@@ -148,18 +150,21 @@ p {
 
 }
 
+
 .box, #main-footer div {
     grid-column: span 2;
+    
 
 }
 
 #section-b ul {
     display: flex;
     justify-content: space-around;
-
+    
 }
 
 #section-b li {
     width: 31%;
+    
     }
 }
