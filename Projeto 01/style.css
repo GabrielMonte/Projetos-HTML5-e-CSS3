@@ -4,7 +4,7 @@
 
 
 
-body {
+body, html {
     margin: 0;
     height: 100%;
     font-size: 16px;
@@ -14,6 +14,69 @@ body {
     color: #666;
 }
 
-.pim1 {
-    background-image: url('Imagens/');
+.pimg1, .pimg2, .pimg3 {
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
 }
+
+.pimg1 {
+    background-image: url('Imagens/simon-zhu-4hluhoRJokI-unsplash.jpg');
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url('Imagens/samson-ZGjbiukp_-A-unsplash.jpg');
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image: url('Imagens/pedro-lastra-Nyvq2juw4_o-unsplash.jpg');
+    min-height: 400px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+.section-light{
+    background: #f4f4f4;
+    color: #666;
+}
+
+.section-dark {
+    background: #282e34;
+    color: #ddd;
+}
+
+.ptext {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+    font-size: 1.9rem;
+    letter-spacing: 8px; /*ESPAÇO DE UMA LETRA PARA OUTRA*/
+    text-transform: uppercase; /* DEIXAR TODAS AS LETRAS MAIUSCULAS*/
+}
+
+.ptext .border {
+    background: #111;
+    color: #fff;
+    padding: 1.5rem;
+}
+
+.ptext .border.trans {
+    background: transparent;
+}
+
+@media( max-width: 568px){
+    .pimg1, .pimg2, .pimg3{
+        background-attachment: scroll;
+    }
+}
+
