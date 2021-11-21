@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container"></div>
+        <headere class="header">
+            <h1 id="title" class="text-center">Formulário de pesquisa freeCodeCamp</h1>
+            <p id="description" class="description text-center">
+                Obrigado por ter tempo para nos ajudar a melhorar a plataforma 
+            </p>
+        </headere>
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="nome">Nome</label>
+            <input type="text" name="nome" id="name" class="form-control" placeholder="Digite seu nome" required>
+            <!-- 'placeholder -> você pões uma descrição no input(na caixa) '-->
+        </div>
+        <div class="form-group">
+            <label for="email" id="email-label">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="number" id="number-label">Idade<span class="clue">(opcional)</span></label>
+            <input type="number" name="idade" id="number" min="10" max="99" class="form-control" placeholder="Idade">
+        </div>
+
+        <div class="form-group">
+            <p>Qual opção melhor descreve seu papel atual?</p>
+                <select name="role" id="dropdown" class="form-control" required>
+                    <option disabled selected value>Selecione a função atual</option>
+                    <option value="Estudante">Estudante</option>
+                    <option value="Trabalho em tempo integral">Trabalho em tempo integral</option>
+                    <option value="Aprendiz em Tempo Integral">Aprendiz em Tempo Integral</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </select>
+        </div>
+    </form>
+    
+</body>
+</html>
