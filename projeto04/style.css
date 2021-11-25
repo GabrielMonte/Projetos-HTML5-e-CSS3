@@ -141,22 +141,18 @@ form {
     outline: 0;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) ;
 }
-
 .input-radio, .input-checkbox {
     display: inline-block;
     margin-right: 0.625rem;
     min-height: 1.25rem;
     min-width: 1.25rem;
 }
-
 .input-textarea {
     min-height: 130px;
     width: 100%;
     padding: 0.625rem;
     resize: vertical; /*SERPER PARA A CAIXA NÃO IR PARA O LADO, APENAS PARA BAIXO */
-
 }
-
 .submit-button {
     display: block;
     width: 100%;
@@ -165,5 +161,6 @@ form {
     color: inherit;
     border-radius: 2px;
     cursor: pointer;
-
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
