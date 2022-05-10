@@ -144,3 +144,22 @@ button{
 .main{
     overflow: hidden; /*transbordar escondido*/
 }
+
+
+/*==========Header & nav==========*/
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    z-index: var(--z-fixed);
+    transition: .4s;
+}
+
+.nav{
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
