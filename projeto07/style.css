@@ -163,3 +163,26 @@ button{
     justify-content: space-between;
     align-items: center;
 }
+
+.nav__logo{
+    display: inline;
+    align-items: center;
+    column-gap: .25rem;
+    font-weight: var(--font-medium);
+    transition: .3s;
+}
+
+.nav__logo i{
+    font-size: 1rem;
+}
+
+.nav__logo:hover{
+    color: var(--first-color);
+}
+
+@media screen and (max-width: 1023px) {
+    .nav__menu{
+        position: fixed;
+        bottom: 2rem;
+    }
+}
