@@ -184,5 +184,7 @@ button{
     .nav__menu{
         position: fixed;
         bottom: 2rem;
+        background-color: var(--container-color);
+        box-shadow: 0 8px 24px hsla(2281 66%, 45%, .15);
     }
 }
