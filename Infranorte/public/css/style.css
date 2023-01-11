@@ -1,1 +1,121 @@
 @charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2? family = Josefin + Slab: ital, wght @ 0,100; 0,200; 0,300; 0,400; 0,500; 0,600; 0,700; 1,100; 1,200; 1,300; 1.400; 1.500; 1.600; 1.700 & display = trocar ');
+
+@import url('https://fonts.googleapis.com/css2? family = Baloo + Da + 2: wght @ 400; 500; 600; 700; 800 & display = swap');
+
+@import url('https://fonts.googleapis.com/css2? family = Mulish: ital, wght @ 0,200; 0,300; 1,200 & display = swap');
+
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+:root{
+    --font-primaria: "Baloo Da 2", serif;
+    --font-segundaria: "Josefin Slab", serif;
+    --font-acao: "Mulish", serif;
+
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-wrapper{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.9;
+    animation: zoom 25s;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+}
+}
+html{
+    scroll-behavior: smooth; /*Adicione um efeito de rolagem suave a uma página*/
+}
+
+.input-checkbox {
+    display: none;
+}
+
+.nav-buttom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    top: 2rem;
+    cursor: pointer;
+    background-color: #ffff;
+    border: none;
+    border-radius: 50%;
+
+}
+
+.nav-buttom span::before,
+.nav-buttom span::after,
+.nav-buttom span {
+    background-color: #ffff;
+    width: 32px;
+    height: 32px;
+    border-radius: 2px;
+    transform: 0.3s;
+}
+
+.nav-buttom span::before, 
+.nav-buttom span::after{
+    content: "";
+    position: relative;
+    display: inline-block;
+}
+
+.nav-buttom span::before{
+    top: -20px;
+}
+
+.nav-buttom span::after{
+    top: -23px;
+}
+
+.input-checkbox:checked + .nav-buttom span {
+    background-color: transparent;
+}
+
+.input-checkbox:checked + .nav-buttom span::before {
+    top: -13px;
+    transform: rotate(135deg);
+}
+
+.input-checkbox:checked + .nav-buttom span::after {
+    top: -32px;
+    transform: rotate(-135deg);
+}
