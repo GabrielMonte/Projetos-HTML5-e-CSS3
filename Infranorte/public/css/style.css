@@ -60,62 +60,141 @@ html{
     scroll-behavior: smooth; /*Adicione um efeito de rolagem suave a uma página*/
 }
 
-.input-checkbox {
-    display: none;
+.banner{
+    position: absolute;
+    top: 30%;
+    left: 15%;
 }
 
-.nav-buttom{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.banner h1{
+    color: #ffff;
+    font-size: 5rem;
+    font-family: var(--font-primaria);
+    font-weight: 200;
+    text-shadow: .3rem .4rem 2px rgba(0, 0, 0, .4);
+    line-height: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 9px;
+    opacity: 0;
+    animation: moveBanner 1s 0.5s forwards ;
+}
+
+@keyframes moveBanner{
+    0%{
+        transform: translateY(10rem) rotateY(-30deg);
+    }
+    100%{
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+.banner p{
+    font-family: var(--font-segundaria);
+    color: #fff;
+    font-size: 2rem;
+    text-shadow: .2rem .2rem rgba(0, 0, 0, .4);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveBanner 1s 0.7s forwards;
+}
+
+.banner button{
+    font-family: var(--font-acao);
+    color: #fff;
+    background: -webkit-linear-gradient(to right,#C50100, #ff1a1a);
+    background: linear-gradient(to right,#C50100, #ff1a1a );
+    padding: 1rem 3rem;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    animation: moveBanner 1s 0.9s forwards;
+}
+
+.banner button:hover{
+    color: black;
+}
+
+.hamburguer{
     width: 2rem;
     height: 2rem;
     position: fixed;
-    z-index: 100;
+    z-index: 150;
     right: 2rem;
     top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     cursor: pointer;
-    background-color: #ffff;
-    border: none;
-    border-radius: 50%;
 
 }
 
-.nav-buttom span::before,
-.nav-buttom span::after,
-.nav-buttom span {
-    background-color: #ffff;
-    width: 32px;
-    height: 32px;
-    border-radius: 2px;
-    transform: 0.3s;
+.show-menu .hamburguer{
+    right: 16rem;
 }
 
-.nav-buttom span::before, 
-.nav-buttom span::after{
-    content: "";
-    position: relative;
-    display: inline-block;
+.line{
+    width: 100%;
+    height: .1rem;
+    padding: 1px;
+    border-radius: 10px;
+    background-color: #000000;
+    transition: transform .7s;
 }
 
-.nav-buttom span::before{
-    top: -20px;
+.show-menu #line1{
+    transform: rotate(-45deg) translate(.4rem, .9rem);
 }
 
-.nav-buttom span::after{
-    top: -23px;
+.show-menu #line2{
+    opacity: 0;
+    visibility: hidden;
 }
 
-.input-checkbox:checked + .nav-buttom span {
-    background-color: transparent;
+.show-menu #line3{
+    transform: rotate(45deg) translate(.3rem, -.9rem);
 }
 
-.input-checkbox:checked + .nav-buttom span::before {
-    top: -13px;
-    transform: rotate(135deg);
+.sidebar{
+    width: 20rem;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 10px 5px 15px 10px rgba(0, 0, 0, 0.582);
+    position: fixed;
+    right: -20rem;
+    top: 0;
+    transition: all 0.8s;
+    z-index: 150;
 }
 
-.input-checkbox:checked + .nav-buttom span::after {
-    top: -32px;
-    transform: rotate(-135deg);
+.show-menu.sidebar{
+    right: 0;
+}
+
+.menu{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.menu-item{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+.menu-link{
+    font-family: var(--font-acao);
+    font-size: 2rem;
+    color: rgb(245, 245,245,);
+    transition: color .7s;
+
+}
+
+.menu-link:hover{
+    color: rgb(0, 255, 255);
 }
