@@ -45,6 +45,7 @@ html{
     height: 3.7em;
     justify-content: space-between;
     padding: 0 7%;
+
 }
 .logo{
     width: 16rem;
@@ -57,13 +58,14 @@ html{
 
 .nav-header a{
     color: #FF1A1A;
-    transition: 1s;
     font-weight: bold;
     cursor: pointer;
 }
 
 .nav-header a:hover{
    color: #fff;
+   border-bottom: 1px solid #fff;
+   
 }
 
 .btn{
@@ -87,4 +89,255 @@ html{
     background-color: #363535;
     border-radius: 10px;
     padding: 10px;
+}
+
+body{
+    background-color: #DF0000;
+}
+
+main{
+    min-width: 300px;
+    max-width: 80rem;
+    margin: auto;
+    background-color: #f1f1f1;
+    padding-top: 0px;
+    padding-bottom: 100%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.418);
+}
+
+.contexto{
+    color: #000;
+    font-size: 3rem;
+    font-family: var(--font-acao);
+    font-weight: 200;
+    margin-top: 10rem;
+    letter-spacing: 1.5rem;
+    
+    
+}
+
+.contexto h1{
+    text-shadow: .3rem .4rem 2px rgba(0, 0, 0, .4);
+
+}
+
+.contexto p{
+    letter-spacing: normal;
+    margin-bottom: 50px;
+}
+
+.btn-header{
+    font-size: 1.1rem;
+    background-color: #000;
+    padding: 1rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    display: inline-block;
+    border: 1px solid #666;
+}
+.btn-header:hover{
+    background: #ffff;
+    color: #000;
+}
+#showcase .img{
+    position: absolute;
+    background: #C4C4C4 url(img/young-man-engineer-making-program-analyses\ 1.png);
+    background-position: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.cabacalho{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 0.1em;
+    z-index: 1;
+}
+
+.corpo{
+    padding-top: 2em;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(182, 180, 180);
+}
+
+.contente-title{
+    font-size: 3rem; 
+    
+}
+
+.sessao-servicos{
+    background-color: #4A4A4A;
+}
+
+.sessao-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.1rem;
+}
+
+.sessao-header h1{
+    font-family: var(--font-primaria);
+    font-size: 3rem;
+    color: #ffff;
+    border-bottom: solid 3px #C50100;
+    
+}
+
+.servicos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 18rem;
+    height: 20rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+}
+
+.card-img{
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    background-color: #666;
+    box-shadow: 1px 1px 4px #1c1c1c;
+    
+}
+
+.card-img img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: 8;
+    transition: opacity .3s;
+}
+
+.card:hover .card-img  img{
+    opacity: 5;
+}
+
+.card-info{
+    opacity: 1;
+    visibility: hidden;
+    position: absolute;
+    bottom: 0;
+    padding-left: 1rem;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, .4);
+    transition: all .4s;
+}
+
+.card-info h2{
+    font-family: var(--font-segundaria);
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: rgb(0, 0, 0);
+    padding-top: 0.5rem;
+    visibility: visible;
+    text-align: center;
+
+}
+
+.card-info p{
+    font-family: var(--font-segundaria);
+    color: #fff;
+    font-weight: 400;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.btn-card{
+    background-color: #666;
+    font-family: var(--font-acao);
+    font-size: 1.2rem;
+    color: rgb(2, 2, 2);
+    border-radius: .5rem;
+    box-shadow: 0 .1rem .8rem rgba(0, 0, 0, .4);
+    cursor: pointer;
+}
+
+.card-info button{
+    width: 8rem;
+    height: 2.5rem;
+
+}
+
+.card:hover .card-info{
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.btn-whatsapp{
+    position: fixed;
+    outline: none;
+    bottom: 30px;
+    right: 30px;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    cursor: pointer;
+    background: #34af23;
+    font-size: 2.3rem;
+    border: 1px solid #f1f1f1;
+
+    animation-name: pulsar;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+@keyframes pulsar {
+
+    0%{
+        height: 65px;
+        width: 65px;
+    }
+
+    100%{
+        height: 80px;
+        width: 80px;
+    }
+}
+.btn-whatsapp i{
+    color: #fff;
+}
+
+footer{
+    width: 100%;
+    height: 15rem;
+    background-color: #4A4A4A;
 }
