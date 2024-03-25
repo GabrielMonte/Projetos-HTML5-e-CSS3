@@ -10,4 +10,9 @@
 }
 .container{
     background-color: #1D2437;
+    background-image: url(img/Asset\ -\ BG\ -\ Luz.png);
+}
+
+.container .righside {
+    background-image: url(img/hero.png);
 }
